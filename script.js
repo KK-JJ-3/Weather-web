@@ -1,6 +1,9 @@
+import { openweatherapi, pexelsapi, rss2jsonapi } from "./env.js"; //remove this line before using
 const apikey = openweatherapi;
 const apikey2 = pexelsapi;
 const apikey3 = rss2jsonapi;
+let currentTemp;
+let currentCondition;
 let a = true;
 let type = "male";
 let c = document.querySelector(".togglebut");
@@ -398,7 +401,7 @@ async function panels(location) {
   for (let i = 0; i < newsitems.length; i++) {
     const newsbox = document.createElement("div");
     newsbox.classList.add("newsbox");
-    list = newsitems[i].pubDate.split(" ");
+    let list = newsitems[i].pubDate.split(" ");
     list[0] = list[0].split("-").reverse().join("-");
     newsbox.innerHTML = `<h3>${newsitems[i].title}</h3>
     <p>${list[0]}</p>
