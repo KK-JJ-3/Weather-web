@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="ribbon">
+        <div class="logo">
+          Weather Web
+          <i
+            class="fa-solid fa-cloud fa-bounce fa-sm"
+            style="color: #ecd0d0"
+          ></i>
+        </div>
+        <div class="searchbar">
+          <input class="bar" type="text" placeholder="Search for a city" />
+          <button class="searchbutton">
+            <i class="fa-solid fa-magnifying-glass" style="color: #ffffff"></i>
+          </button>
+        </div>
+        <div class="toggle">
+          <button class="togglebut">
+            <i class="fa-solid fa-sun" style="color: #ffd43b"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="effect"></div>
+      <div class="info">
+        <div class="grid">
+          <div class="location glass">
+            <div class="heading">Location</div>
+            <div class="tag"></div>
+          </div>
+          <div class="temp glass">
+            <div class="heading">Temp</div>
+            <div class="tag"></div>
+          </div>
+          <div class="weather glass">
+            <div class="heading">Weather</div>
+            <div class="tag"></div>
+          </div>
+          <div class="speed glass">
+            <div class="heading">Speed</div>
+            <div class="tag"></div>
+          </div>
+          <div class="AQI glass">
+            <div class="heading">AQI</div>
+            <div class="tag"></div>
+          </div>
+          <div class="humidity glass">
+            <div class="heading">Humidity</div>
+            <div class="tag"></div>
+          </div>
+          <div class="feel_like glass">
+            <div class="heading">Feels Like</div>
+            <div class="tag"></div>
+          </div>
+          <div class="temp_max glass">
+            <div class="heading">Max Temp</div>
+            <div class="tag"></div>
+          </div>
+          <div class="temp_min glass">
+            <div class="heading">Min Temp</div>
+            <div class="tag"></div>
+          </div>
+          <div class="day5 glass">
+            <div class="heading">5 day forecast</div>
+            <div class="heading">
+              <div class="date5">Date</div>
+              <div class="temp5">Temp</div>
+              <div class="weather5">Weather</div>
+              <div class="speed5">Speed</div>
+            </div>
+            <div class="gride5day">
+              <div class="days1">
+                <div class="date5"></div>
+                <div class="temp5"></div>
+                <div class="weather5"></div>
+                <div class="speed5"></div>
+              </div>
+              <div class="days2">
+                <div class="date5"></div>
+                <div class="temp5"></div>
+                <div class="weather5"></div>
+                <div class="speed5"></div>
+              </div>
+              <div class="days3">
+                <div class="date5"></div>
+                <div class="temp5"></div>
+                <div class="weather5"></div>
+                <div class="speed5"></div>
+              </div>
+              <div class="days4">
+                <div class="date5"></div>
+                <div class="temp5"></div>
+                <div class="weather5"></div>
+                <div class="speed5"></div>
+              </div>
+              <div class="days5">
+                <div class="date5"></div>
+                <div class="temp5"></div>
+                <div class="weather5"></div>
+                <div class="speed5"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="popbut glass">
+          Compare &nbsp;<i class="fa-solid fa-arrow-right-arrow-left"></i>
+        </button>
+        <div class="popupback">
+          <div class="popup">
+            <div class="topbar">
+              <h1>Compare Cities</h1>
+              <button class="closebtn">&times;</button>
+            </div>
+            <div class="compinfo">
+              <div class="searcharea">
+                <input
+                  class="compbar"
+                  type="text"
+                  placeholder="Search for a city"
+                />
+                <button class="compsearch">
+                  <i
+                    class="fa-solid fa-magnifying-glass"
+                    style="color: #ffffff"
+                  ></i>
+                </button>
+              </div>
+              <div class="infoarea">
+                <div class="locationcomp">
+                  <div class="box0">Location</div>
+                  <div class="box1"></div>
+                  <div class="box2">📍</div>
+                  <div class="box3"></div>
+                </div>
+                <div class="tempcomp">
+                  <div class="box0">Temp</div>
+                  <div class="box1"></div>
+                  <div class="box2">🌡️</div>
+                  <div class="box3"></div>
+                </div>
+                <div class="weathercomp">
+                  <div class="box0">Weather</div>
+                  <div class="box1"></div>
+                  <div class="box2">🌤️</div>
+                  <div class="box3"></div>
+                </div>
+                <div class="speedcomp">
+                  <div class="box0">Speed</div>
+                  <div class="box1"></div>
+                  <div class="box2">🎐</div>
+                  <div class="box3"></div>
+                </div>
+                <div class="humiditycomp">
+                  <div class="box0">Humidity</div>
+                  <div class="box1"></div>
+                  <div class="box2">💧</div>
+                  <div class="box3"></div>
+                </div>
+                <div class="AQIcomp">
+                  <div class="box0">AQI</div>
+                  <div class="box1"></div>
+                  <div class="box2">💨</div>
+                  <div class="box3"></div>
+                </div>
+                <div class="feellikecomp">
+                  <div class="box0">Feels Like</div>
+                  <div class="box1"></div>
+                  <div class="box2">🌡️</div>
+                  <div class="box3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="suggestion">
+        <div class="headpart">
+          <h1>What should you wear today ?</h1>
+          <div class="switch">
+            <button><i class="fa-solid fa-mars"></i> Male</button>
+          </div>
+        </div>
+        <div class="images">
+          <div class="imagebox1"></div>
+          <div class="imagebox2"></div>
+          <div class="imagebox3"></div>
+          <div class="imagebox4"></div>
+          <div class="imagebox5"></div>
+        </div>
+        <div class="textsuggestions">
+          <div class="description"></div>
+        </div>
+      </div>
+      <div class="news">
+        <div class="paperheading"><h1>TOP ARTICLES</h1></div>
+        <div class="articals"></div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
